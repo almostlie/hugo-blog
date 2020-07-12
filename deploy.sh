@@ -1,5 +1,7 @@
 #!/bin/bash
 
+hugo -t even
+
 cd public
 
 git init
