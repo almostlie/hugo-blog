@@ -1,21 +1,15 @@
 ---
 title: "About"
-date: 2017-08-20T21:38:52+08:00
-lastmod: 2017-08-28T21:41:52+08:00
+date: 2020-07-12T11:42:00+08:00
+lastmod: 2020-07-12T11:42:00+08:00
 menu: "main"
 weight: 50
 
 ---
 
-Hugo is a static site engine written in Go.
+本站使用 [hugo](https://gohugo.io) 博客引擎强力驱动
 
-
-It makes use of a variety of open source projects including:
-
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+- 源码以及博客 Markdown 原文请查看 [这里](https://github.com/newcome/newcome.github.com) 
+- 域名来自 [aliyun](https://wanwang.aliyun.com)
+- SSL 证书使用 [Cloudflare](https://www.cloudflare.com) 免费获取
 
