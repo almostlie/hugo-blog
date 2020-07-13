@@ -23,6 +23,7 @@ https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 
 hash的重要性:例如上述第三步,可以直接跳过b,将整体时间复杂度从o(n^2)降低到o(n)
 
+## 代码实现
 ```java
 class Solution {
     public int lengthOfLongestSubstring(String s) {
