@@ -1,5 +1,9 @@
 #!/bin/bash
 
+rm -rf ./public/*
+
+rm -rf ./public/.git
+
 hugo -t even
 
 cd public
