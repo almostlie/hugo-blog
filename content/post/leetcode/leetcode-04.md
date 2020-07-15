@@ -7,17 +7,17 @@ categories: ["leetcode"]
 ---
 
 ## 题目
-给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
+给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。找出这两个正序数组的中位数，并且要求算法的时间复杂度为 `O(log(m + n))`。
 
 https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
 
 ## 问题分析
 这道题有两道思路:
-1. 合并数组用log(m+n)的方式进行排序,从下标(((m + n)/2 - 1) + ((m + n)/2)/2) || (m+n)/2和或则取得最后的数
+1. 合并数组用`O(log(m+n))`的方式进行排序,从下标`(((m + n)/2 - 1) + ((m + n)/2)/2) || (m+n)/2`和或则取得最后的数
 2. 使用第k大的数 + 二分查找的思想
-    1. 算出k是第几大的数,如果为偶数则 k = (m + n + 1)/2 和 k = (m + n + 2)/2 和,奇数中位数一定是 k = (m + n + 1)/2
-    2. 算出当前需要比较数的个数:compareNumLength= k/2, 两个数组比较 num[compareNumLength - 1] 处的值,较小的一方的值直接全部舍弃 (特殊情况:compareNumLength > 任意一个数组的剩余最大长度 ,将把数组的最大长度作为compareNumLength)
-    3. 在剩余数组中还需要计算第 k - compareNumLength大的值,直到k=1,可以直接算出最大的值
+    1. 算出k是第几大的数,如果为偶数则` k = (m + n + 1)/2` 和 `k = (m + n + 2)/2` 和,奇数中位数一定是 `k = (m + n + 1)/2`
+    2. 算出当前需要比较数的个数:`compareNumLength= k/2`, 两个数组比较 `num[compareNumLength - 1]` 处的值,较小的一方的值直接全部舍弃 (特殊情况:`compareNumLength` > 任意一个数组的剩余最大长度 ,将把数组的最大长度作为`compareNumLength`)
+    3. 在剩余数组中还需要计算第 `k - compareNumLength`大的值,直到k=1,可以直接算出最大的值
     
 ## 代码实现
 

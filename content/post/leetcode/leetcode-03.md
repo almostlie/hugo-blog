@@ -17,10 +17,10 @@ https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 使用一个队列,比如例题中的 abcabcbb，进入这个队列（窗口）为 abc 满足题目要求，当再进入 a，队列变成了 abca，这时候不满足要求。所以，我们要移动这个队列
 
 如何移动?当abc满足题目要求时:
-1. 通过hash保存abc的值与下标为HashMap<value,index>,left = 0为左指针,right = 0为右指针,右指针驱动循环
-2. 队列变成了 abca,更改hash的下标为Max(left,倒数第二个1的位置的下标),并将左指针向penultimate_a + 1
-3. 队列变成了 abcac,更改hash的下标为为Max(left,倒数第二个b的位置的下标),并将左指针指向penultimate_c + 1
-4. 队列变成了 abcacb,更改hash的下标为为Max(left,倒数第二个b的位置的下标),并将左指针指向penultimate_c + 1
+1. 通过hash保存abc的值与下标为`HashMap<value,index>`,`left = 0`为左指针,`right = 0`为右指针,右指针驱动循环
+2. 队列变成了 abca,更改left的下标为倒数第二个a的位置的下标,并将左指针向`penultimate_a + 1`
+3. 队列变成了 abcac,更改left的下标为倒数第二个c的位置的下标,并将左指针指向`penultimate_c + 1`
+4. 队列变成了 abcacb,更改left的下标为倒数第二个b的位置的下标,但是倒数第二个b位置的下标小于当前下标,不做改动
 
 hash的重要性:例如上述第三步,可以直接跳过b,将整体时间复杂度从o(n^2)降低到o(n)
 
