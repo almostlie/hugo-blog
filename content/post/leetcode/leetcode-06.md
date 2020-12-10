@@ -10,6 +10,7 @@ categories: ["leetcode"]
 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
 
 https://leetcode-cn.com/problems/zigzag-conversion/solution/z-zi-xing-bian-huan-by-leetcode/
+
 ## 问题分析
 这道题有两种思路
 1. 按行建立数组,推断下一个数的行号,填入对应数组中
